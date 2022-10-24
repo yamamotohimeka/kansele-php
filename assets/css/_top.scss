@@ -1,0 +1,306 @@
+.top {
+  &__swiper {
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+    width: 1200px;
+    @include pc {
+      margin-top: calc(50vw / (1280 / 100));
+      width: calc(1200vw / (1280 / 100));
+    }
+    @include tab {
+      margin-top: calc(50vw / (768 / 100));
+      width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 53px;
+      height: 53px;
+      @include pc {
+        width: calc(53vw / (1280 / 100));
+        height: calc(53vw / (1280 / 100));
+      }
+      @include tab {
+        width: calc(53vw / (768 / 100));
+        height: calc(53vw / (768 / 100));
+      }
+      @include sp {
+        top: 55%;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+    .swiper-button-next {
+      background: url(../images/swiper-arrow.png) no-repeat;
+      background-size: contain;
+    }
+    .swiper-button-prev {
+      background: url(../images/swiper-arrow.png) no-repeat;
+      transform: scale(-1, 1);
+      background-size: contain;
+    }
+  }
+  &__sche {
+    padding-bottom: 78px;
+    @include pc {
+      padding-bottom: calc(78vw / (1280 / 100));
+    }
+    @include tab {
+      padding-bottom: calc(78vw / (768 / 100));
+    }
+
+    &__nav {
+      &__list {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+        @include pc {
+          gap: calc(8vw / (1280 / 100));
+        }
+        @include tab {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+  &__newface {
+    &-bg {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      height: 920px;
+      background: url(../images/bg-newface.png) no-repeat;
+      background-size: cover;
+
+      @media screen and (min-width: 2000px) {
+        border-bottom: 1px solid #9c9cd6;
+      }
+      @include pc {
+        height: calc(920vw / (1280 / 100));
+      }
+      @include tab {
+        height: calc(1650vw / (768 / 100));
+      }
+      @include sp {
+        height: calc(1150vw / (440 / 100));
+      }
+    }
+
+    &__nav {
+      &__list {
+        @include flex-around;
+        @include tab {
+          justify-content: flex-start;
+          gap: calc(41vw / (768 / 100)) calc(26vw / (768 / 100));
+        }
+        @include sp {
+          gap: calc(35vw / (440 / 100)) calc(15vw / (440 / 100));
+        }
+      }
+    }
+
+    &-button {
+      position: relative;
+      margin: 70px auto 0;
+      width: 400px;
+      padding: 17px 0;
+      text-align: center;
+      color: $pink;
+      background-color: #fae3ed;
+      border-radius: 50px;
+      font-size: 22px;
+      font-weight: 600;
+
+      @include pc {
+        margin: calc(70vw / (1280 / 100)) auto 0;
+        width: calc(400vw / (1280 / 100));
+        padding: calc(17vw / (1280 / 100)) 0;
+        border-radius: calc(50vw / (1280 / 100));
+        font-size: calc(22vw / (1280 / 100));
+      }
+      @include tab {
+        margin: calc(70vw / (768 / 100)) auto 0;
+        width: calc(400vw / (768 / 100));
+        padding: calc(17vw / (768 / 100)) 0;
+        border-radius: calc(50vw / (768 / 100));
+        font-size: calc(22vw / (768 / 100));
+      }
+      @include sp {
+        margin: calc(50vw / (440 / 100)) auto 0;
+        width: calc(400vw / (440 / 100));
+        padding: calc(17vw / (440 / 100)) 0;
+        border-radius: calc(50vw / (440 / 100));
+        font-size: calc(22vw / (440 / 100));
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 1px solid #efb6cf;
+        border-radius: 50px;
+        width: 390px;
+        height: 50px;
+        pointer-events: none;
+        @include pc {
+          width: calc(390vw / (1280 / 100));
+          height: calc(50vw / (1280 / 100));
+        }
+        @include tab {
+          width: calc(390vw / (768 / 100));
+          height: calc(50vw / (768 / 100));
+        }
+        @include sp {
+          width: calc(390vw / (440 / 100));
+          height: calc(50vw / (440 / 100));
+        }
+      }
+    }
+  }
+
+  &__pickup {
+    padding-bottom: 60px;
+    @include pc {
+      padding-bottom: calc(60vw / (1280 / 100));
+    }
+    @include tab {
+      padding-bottom: calc(60vw / (768 / 100));
+    }
+    &__nav {
+      &__list {
+        @include flex;
+        @include tab {
+          gap: calc(25vw / (768 / 100));
+        }
+      }
+    }
+  }
+
+  &__kuchikomi {
+    padding-bottom: 50px;
+    background: linear-gradient(45deg, #fadde9 0%, #f7eac6 100%);
+    background: -moz-linear-gradient(45deg, #fadde9 0%, #f7eac6 100%);
+    background: -webkit-linear-gradient(45deg, #fadde9 0%, #f7eac6 100%);
+    background: -ms-linear-gradient(45deg, #fadde9 0%, #f7eac6 100%);
+    @include pc {
+      padding-bottom: calc(50vw / (1280 / 100));
+    }
+    @include tab {
+      padding-bottom: calc(50vw / (768 / 100));
+    }
+
+    &__swiper {
+      width: 1200px;
+      @include pc {
+        width: calc(1200vw / (1280 / 100));
+      }
+      @include tab {
+        width: calc(700vw / (768 / 100));
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 53px;
+        height: 53px;
+        @include pc {
+          width: calc(53vw / (1280 / 100));
+          height: calc(53vw / (1280 / 100));
+        }
+        @include tab {
+          top: 30%;
+          width: calc(53vw / (768 / 100));
+          height: calc(53vw / (768 / 100));
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+      .swiper-button-next {
+        background: url(../images/swiper-arrow.png) no-repeat;
+        background-size: contain;
+      }
+      .swiper-button-prev {
+        background: url(../images/swiper-arrow.png) no-repeat;
+        transform: scale(-1, 1);
+        background-size: contain;
+      }
+    }
+  }
+
+  &__concept {
+    position: relative;
+    background-color: #fdf2d2;
+    width: 1190px;
+    margin: 0 auto 100px;
+
+    @include pc {
+      width: calc(1190vw / (1280 / 100));
+      margin: 0 auto calc(100vw / (1280 / 100));
+    }
+    @include tab {
+      width: 100%;
+      margin: 0 auto calc(100vw / (768 / 100));
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 1190px;
+      height: 495px;
+      border: 1px solid #a1a1da;
+      @include pc {
+        top: calc(10vw / (1280 / 100));
+        left: calc(10vw / (1280 / 100));
+        width: calc(1190vw / (1280 / 100));
+        height: calc(495vw / (1280 / 100));
+      }
+      @include tab {
+        top: calc(10vw / (768 / 100));
+        left: calc(10vw / (768 / 100));
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-text {
+      padding: 50px 0;
+      color: #666874;
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      line-height: 3.1;
+      @include pc {
+        padding: calc(50vw / (1280 / 100)) 0;
+        font-size: calc(16vw / (1280 / 100));
+      }
+      @include tab {
+        padding: calc(50vw / (768 / 100)) 5%;
+        font-size: calc(25vw / (768 / 100));
+      }
+
+      span {
+        font-size: 30px;
+        font-family: 游明朝, Yu Mincho, 游明朝体, YuMincho, serif;
+        @include pc {
+          font-size: calc(30vw / (1280 / 100));
+        }
+        @include tab {
+          font-size: calc(40vw / (768 / 100));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.pickupCard {
+  width: 25%;
+  @include tab {
+    width: 48%;
+  }
+
+  .store-label {
+    width: 285px;
+    @include pc {
+      width: calc(285vw / (1280 / 100));
+    }
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &-img {
+    padding-top: 8px;
+    text-align: center;
+    @include pc {
+      padding-top: calc(8vw / (1280 / 100));
+    }
+    @include tab {
+      padding-top: calc(8vw / (768 / 100));
+    }
+    img {
+      width: 285px;
+      @include pc {
+        width: calc(285vw / (1280 / 100));
+      }
+      @include tab {
+        width: 100%;
+      }
+    }
+  }
+
+  &-name {
+    padding-top: 8px;
+    text-align: center;
+    font-size: 30px;
+    color: $pink;
+    font-weight: bold;
+    @include pc {
+      padding-top: calc(8vw / (1280 / 100));
+      font-size: calc(30vw / (1280 / 100));
+    }
+    @include tab {
+      padding-top: calc(8vw / (768 / 100));
+      font-size: calc(30vw / (768 / 100));
+    }
+    @include sp {
+      padding-top: calc(8vw / (440 / 100));
+      font-size: calc(25vw / (440 / 100));
+    }
+  }
+  &-size {
+    text-align: center;
+    font-size: 22px;
+    color: $pink;
+    @include pc {
+      font-size: calc(22vw / (1280 / 100));
+    }
+    @include tab {
+      font-size: calc(22vw / (768 / 100));
+    }
+    @include sp {
+      padding-top: calc(5vw / (440 / 100));
+      font-size: calc(17vw / (440 / 100));
+    }
+  }
+}

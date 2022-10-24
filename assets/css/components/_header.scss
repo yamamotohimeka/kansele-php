@@ -1,0 +1,260 @@
+.header {
+  &-bar {
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #c0c0ed;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    @include pc {
+      padding: calc(5vw / (1280 / 100)) 0;
+      font-size: calc(16vw / (1280 / 100));
+    }
+    @include tab {
+      padding: calc(5vw / (768 / 100)) calc(20vw / (768 / 100));
+      font-size: calc(21vw / (768 / 100));
+    }
+    @include sp {
+      line-height: 1.5;
+    }
+  }
+  &-top {
+    height: 775px;
+    background: url(../images/header-bg.png) no-repeat;
+    background-position: center;
+    background-size: 2000px 745px;
+    border-bottom: 30px solid #a5a5d8;
+
+    @media screen and (min-width: 2000px) {
+      background-size: cover;
+    }
+    @include pc {
+      height: calc(775vw / (1280 / 100));
+      background-size: calc(2000vw / (1280 / 100)) calc(745vw / (1280 / 100));
+      border-bottom: calc(30vw / (1280 / 100)) solid #a5a5d8;
+    }
+    @include tab {
+      height: calc(775vw / (768 / 100));
+      background-size: cover;
+      border-bottom: calc(30vw / (768 / 100)) solid #a5a5d8;
+    }
+  }
+  &-logo {
+    padding-top: 40px;
+    margin: 0 auto;
+    width: 959px;
+    text-align: center;
+    @include pc {
+      padding-top: calc(40vw / (1280 / 100));
+      width: calc(959vw / (1280 / 100));
+    }
+    @include tab {
+      padding-top: calc(114vw / (768 / 100));
+      width: calc(735vw / (768 / 100));
+    }
+  }
+  &__label {
+    @include flex-center;
+    gap: 45px;
+    padding-top: 20px;
+    @include pc {
+      padding-top: calc(20vw / (1280 / 100));
+    }
+    @include tab {
+      flex-direction: column;
+      gap: calc(20vw / (768 / 100));
+      padding-top: calc(40vw / (768 / 100));
+    }
+    &-tel {
+      width: 438px;
+      @include pc {
+        width: calc(438vw / (1280 / 100));
+      }
+      @include tab {
+        width: calc(438vw / (768 / 100));
+      }
+    }
+    &-hour {
+      text-align: center;
+      width: 380px;
+      img {
+        padding-bottom: 5px;
+        @include pc {
+          padding-bottom: calc(5vw / (1280 / 100));
+        }
+        @include tab {
+          padding-bottom: calc(5vw / (768 / 100));
+        }
+      }
+      span {
+        font-size: 16px;
+        color: $pink;
+        @include pc {
+          font-size: calc(16vw / (1280 / 100));
+        }
+        @include tab {
+          font-size: calc(16vw / (768 / 100));
+        }
+      }
+      @include pc {
+        width: calc(380vw / (1280 / 100));
+      }
+      @include tab {
+        width: calc(388vw / (768 / 100));
+      }
+    }
+  }
+  &__cosme {
+    padding-left: 30px;
+    width: 1139px;
+    @include pc {
+      padding-left: calc(30vw / (1280 / 100));
+      width: calc(1139vw / (1280 / 100));
+    }
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    background-color: #c0c0ed;
+    padding: 10px 0;
+    @include pc {
+      padding: calc(10vw / (1280 / 100)) 0;
+    }
+    &__list {
+      @include flex;
+      &-link {
+        padding-top: 10px;
+        width: 195px;
+        height: 84px;
+        text-align: center;
+        background: url(../images/btn-bg.png) no-repeat;
+        background-size: 195px 84px;
+        background-position: center;
+        color: #fff;
+        line-height: 1;
+        @include pc {
+          padding-top: calc(10vw / (1280 / 100));
+          width: calc(195vw / (1280 / 100));
+          height: calc(84vw / (1280 / 100));
+          background-size: calc(195vw / (1280 / 100)) calc(84vw / (1280 / 100));
+        }
+
+        & p:nth-child(1) {
+          font-size: 40px;
+          font-family: "Island Moments", cursive;
+          letter-spacing: 3.2px;
+          @include pc {
+            font-size: calc(40vw / (1280 / 100));
+          }
+        }
+        & p:nth-child(2) {
+          font-size: 17px;
+          @include pc {
+            font-size: calc(17vw / (1280 / 100));
+          }
+        }
+      }
+    }
+  }
+
+  &__tabNav {
+    position: fixed;
+    left: -100%;
+
+    &-active {
+      position: fixed;
+      left: 0 !important;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      background: $purple;
+      z-index: 10;
+    }
+
+    &__list {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%);
+      color: #fff;
+
+      &-link {
+        padding-bottom: calc(50vw / (768 / 100));
+        margin: 0 auto;
+        font-size: calc(30vw / (768 / 100));
+        span {
+          display: block;
+          font-size: calc(65vw / (768 / 100));
+          font-family: "Island Moments", cursive;
+        }
+      }
+    }
+  }
+
+  &__tabButton {
+    position: fixed;
+    width: calc(44vw / (768 / 100));
+    height: calc(32vw / (768 / 100));
+    right: calc(32vw / (768 / 100));
+    top: calc(66vw / (768 / 100));
+    z-index: 20;
+    span {
+      position: absolute;
+      left: 0px;
+      top: calc(14vw / (768 / 100));
+      width: 100%;
+      height: calc(3vw / (768 / 100));
+      background: #fff;
+      transition: 0.3s all ease-in-out;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: calc(-14vw / (768 / 100));
+        width: 100%;
+        height: calc(3vw / (768 / 100));
+        background: #fff;
+        transition: 0.3s all ease-in-out;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: calc(14vw / (768 / 100));
+        width: 100%;
+        height: calc(3vw / (768 / 100));
+        background: #fff;
+        transition: 0.3s all ease-in-out;
+      }
+    }
+    &-active {
+      background: none !important;
+      &::before {
+        top: 0px !important;
+        transform: rotate(45deg);
+        background: #fff;
+      }
+      &::after {
+        top: 0 !important;
+        transform: rotate(-45deg);
+        background: #fff;
+      }
+    }
+
+    &-bg {
+      z-index: 20;
+      position: fixed;
+      display: block;
+      width: calc(80vw / (768 / 100));
+      height: calc(80vw / (768 / 100));
+      right: calc(14vw / (768 / 100));
+      top: calc(42vw / (768 / 100));
+      background: #a5a5d8;
+      opacity: 0.8;
+    }
+  }
+}

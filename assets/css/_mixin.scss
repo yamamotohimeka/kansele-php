@@ -1,0 +1,76 @@
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+$pc: 1240px;
+$tab: 768px;
+$sp: 440px;
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+$black: #3b3b3b;
+$purple: #c0c0ed;
+$pink: #bf688e;
+
+@mixin puremium {
+  background-size: contain;
+  width: 110px;
+  height: 50px;
+  position: absolute;
+  bottom: 15px;
+  left: 6px;
+  @include pc {
+    width: calc(110vw / (1280 / 100));
+    height: calc(50vw / (1280 / 100));
+    bottom: calc(15vw / (1280 / 100));
+    left: calc(6vw / (1280 / 100));
+  }
+  @include tab {
+    width: calc(110vw / (768 / 100));
+    height: calc(50vw / (768 / 100));
+    bottom: calc(15vw / (768 / 100));
+    left: calc(6vw / (768 / 100));
+  }
+}

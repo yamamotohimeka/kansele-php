@@ -1,0 +1,183 @@
+.kuchikomiCard {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  @include pc {
+    gap: calc(50vw / (1280 / 100));
+  }
+  @include tab {
+    gap: calc(40vw / (768 / 100));
+    justify-content: center;
+  }
+  .store-label {
+    width: 300px;
+    @include pc {
+      width: calc(300vw / (1280 / 100));
+    }
+    @include tab {
+      width: calc(400vw / (768 / 100));
+    }
+  }
+  &-img {
+    padding-top: 8px;
+    @include pc {
+      padding-top: calc(8vw / (1280 / 100));
+    }
+    @include tab {
+      padding-top: calc(8vw / (768 / 100));
+    }
+    img {
+      width: 300px;
+      @include pc {
+        width: calc(300vw / (1280 / 100));
+      }
+      @include tab {
+        width: calc(400vw / (768 / 100));
+      }
+    }
+  }
+  &-right {
+    padding-top: 40px;
+    width: 630px;
+    @include pc {
+      padding-top: calc(40vw / (1280 / 100));
+      width: calc(630vw / (1280 / 100));
+    }
+    @include tab {
+      padding-top: 0;
+      width: calc(630vw / (768 / 100));
+    }
+  }
+
+  &-info {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+    @include pc {
+      gap: calc(20vw / (1280 / 100));
+    }
+    @include tab {
+      justify-content: center;
+      gap: calc(20vw / (768 / 100));
+    }
+    @include sp {
+      flex-direction: column;
+    }
+    &-name {
+      font-size: 30px;
+      color: $pink;
+      font-weight: bold;
+      @include pc {
+        font-size: calc(30vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(40vw / (768 / 100));
+      }
+      @include sp {
+        font-size: calc(30vw / (440 / 100));
+      }
+    }
+    &-size {
+      font-size: 22px;
+      color: $pink;
+      @include pc {
+        font-size: calc(22vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(30vw / (768 / 100));
+      }
+      @include sp {
+        font-size: calc(20vw / (440 / 100));
+      }
+    }
+  }
+
+  &-review {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding-top: 30px;
+    @include pc {
+      gap: calc(50vw / (1280 / 100));
+      padding-top: calc(30vw / (1280 / 100));
+    }
+    @include tab {
+      gap: calc(50vw / (768 / 100));
+      padding-top: calc(30vw / (768 / 100));
+    }
+
+    &-user {
+      gap: 10px;
+      @include pc {
+        gap: calc(10vw / (1280 / 100));
+      }
+      @include pc {
+        gap: calc(10vw / (768 / 100));
+      }
+    }
+    &-star {
+      color: #f19613;
+      font-size: 20px;
+      @include pc {
+        font-size: calc(20vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(20vw / (768 / 100));
+      }
+      @include sp {
+        font-size: calc(20vw / (440 / 100));
+      }
+
+      span {
+        color: #3b3b3b;
+        font-size: 25px;
+        font-weight: bold;
+        @include pc {
+          font-size: calc(25vw / (1280 / 100));
+        }
+        @include tab {
+          font-size: calc(25vw / (768 / 100));
+        }
+      }
+    }
+  }
+
+  &-comment {
+    h3 {
+      padding: 20px 0;
+      color: #db1b4b;
+      font-size: 22px;
+      font-weight: bold;
+      @include pc {
+        padding: calc(20vw / (1280 / 100)) 0;
+        font-size: calc(22vw / (1280 / 100));
+      }
+      @include tab {
+        padding: calc(20vw / (768 / 100)) 0;
+        font-size: calc(30vw / (768 / 100));
+      }
+      @include sp {
+        padding: calc(20vw / (440 / 100)) 0;
+        font-size: calc(20vw / (440 / 100));
+      }
+    }
+    p {
+      color: $black;
+      letter-spacing: 1.5px;
+      line-height: 1.5;
+      font-size: 16px;
+      font-weight: bold;
+      @include pc {
+        font-size: calc(16vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(16vw / (768 / 100));
+      }
+      @include sp {
+        font-size: calc(15vw / (440 / 100));
+      }
+    }
+  }
+}

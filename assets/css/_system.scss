@@ -1,0 +1,541 @@
+.system {
+  &-wrap {
+    margin-top: 25px;
+    padding: 25px 0 85px;
+    background: url(../images/system-bg.png) no-repeat;
+    background-size: 1200px 1720px;
+    border-bottom: 1px solid #6767bd;
+    @include pc {
+      margin-top: calc(25vw / (1280 / 100));
+      padding: calc(25vw / (1280 / 100)) 0 calc(85vw / (1280 / 100));
+      background-size: calc(1200vw / (1280 / 100)) calc(1720vw / (1280 / 100));
+    }
+    @include tab {
+      margin-top: calc(25vw / (768 / 100));
+      padding: calc(25vw / (768 / 100)) 0 calc(85vw / (768 / 100));
+      background-position: top 0 left calc(-240vw / (768 / 100));
+      background-size: cover;
+      height: calc(2180vw / (768 / 100));
+      border-right: 1px solid #6767bd;
+      border-left: 1px solid #6767bd;
+    }
+  }
+
+  &__h3 {
+    width: 577px;
+    margin: 0 auto;
+    padding: 135px 0 85px;
+    background: url(../images/system-ribbon.png) no-repeat;
+    background-size: 575px 151px;
+    background-position: top 127px left 0;
+    color: #893f45;
+    font-family: "Island Moments", cursive;
+    font-size: 52px;
+    font-weight: bold;
+    text-align: center;
+
+    @include pc {
+      width: calc(577vw / (1280 / 100));
+      padding: calc(135vw / (1280 / 100)) 0 calc(85vw / (1280 / 100));
+      background-size: calc(575vw / (1280 / 100)) calc(151vw / (1280 / 100));
+      background-position: top calc(127vw / (1280 / 100)) left 0;
+      font-size: calc(52vw / (1280 / 100));
+    }
+    @include tab {
+      width: 100%;
+      padding: calc(135vw / (768 / 100)) 0 calc(120vw / (768 / 100));
+      background-size: 100%;
+      background-position: top calc(133vw / (768 / 100)) left 0;
+      font-size: calc(80vw / (768 / 100));
+    }
+  }
+
+  &__course-name {
+    padding: 0 0 40px;
+    text-align: center;
+    color: #c65d65;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    @include pc {
+      padding: 0 0 calc(40vw / (1280 / 100));
+      font-size: calc(28vw / (1280 / 100));
+    }
+    @include tab {
+      padding: 0 0 calc(40vw / (768 / 100));
+      font-size: calc(28vw / (768 / 100));
+    }
+    @include sp {
+      padding: 0 0 calc(20vw / (440 / 100));
+      font-size: calc(22vw / (440 / 100));
+    }
+
+    span {
+      font-size: 20px;
+      @include pc {
+        font-size: calc(20vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(28vw / (768 / 100));
+      }
+    }
+  }
+
+  &__price {
+    @include flex-center;
+    gap: 50px;
+    padding-bottom: 50px;
+    color: #6767bd;
+    font-size: 60px;
+    font-weight: bold;
+    @include pc {
+      gap: calc(50vw / (1280 / 100));
+      padding-bottom: calc(50vw / (1280 / 100));
+      font-size: calc(60vw / (1280 / 100));
+    }
+    @include tab {
+      padding-bottom: calc(50vw / (768 / 100));
+      gap: calc(50vw / (768 / 100));
+      font-size: calc(60vw / (768 / 100));
+    }
+    @include sp {
+      padding-bottom: calc(50vw / (440 / 100));
+      font-size: calc(30vw / (440 / 100));
+    }
+
+    span {
+      font-size: 40px;
+      @include pc {
+        font-size: calc(40vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(40vw / (768 / 100));
+      }
+      @include sp {
+        font-size: calc(25vw / (440 / 100));
+      }
+    }
+
+    &-time {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 35px;
+      @include pc {
+        gap: calc(35vw / (1280 / 100));
+      }
+      @include tab {
+        gap: calc(35vw / (768 / 100));
+      }
+    }
+
+    &-money {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 35px;
+      @include pc {
+        gap: calc(35vw / (1280 / 100));
+      }
+      @include tab {
+        gap: calc(35vw / (768 / 100));
+      }
+    }
+  }
+
+  &__premium {
+    &__list {
+      @include flex-center;
+      gap: 20px;
+      color: #6767bd;
+      font-size: 35px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      @include pc {
+        gap: calc(20vw / (1280 / 100));
+        font-size: calc(35vw / (1280 / 100));
+      }
+      @include tab {
+        gap: calc(20vw / (768 / 100));
+        font-size: calc(35vw / (768 / 100));
+        justify-content: space-evenly;
+      }
+
+      &-link {
+        @include flex-start;
+        align-items: center;
+        gap: 30px;
+        width: 34%;
+        @include pc {
+          gap: calc(30vw / (1280 / 100));
+        }
+        @include tab {
+          gap: calc(15vw / (768 / 100));
+          flex-direction: column;
+        }
+        img {
+          width: 110px;
+          @include pc {
+            width: calc(110vw / (1280 / 100));
+          }
+          @include tab {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__pay {
+    padding: 140px 0;
+    background: url(../images/system-bg-pay.png) no-repeat;
+    background-size: 1149px 638px;
+    background-position: center;
+    color: #6767bd;
+
+    @include pc {
+      padding: calc(140vw / (1280 / 100)) 0;
+      background-size: calc(1149vw / (1280 / 100)) calc(638vw / (1280 / 100));
+    }
+    @include tab {
+      padding: calc(220vw / (768 / 100)) 0;
+      background-size: auto calc(820vw / (768 / 100));
+    }
+
+    &-price {
+      @include flex-center;
+      gap: 20px 155px;
+      padding: 45px 0;
+      font-size: 40px;
+      font-weight: bold;
+      width: 70%;
+      margin: 0 auto;
+      @include pc {
+        gap: calc(20vw / (1280 / 100)) calc(155vw / (1280 / 100));
+        padding: calc(45vw / (1280 / 100)) 0;
+        font-size: calc(40vw / (1280 / 100));
+      }
+      @include tab {
+        gap: calc(20vw / (768 / 100)) calc(155vw / (768 / 100));
+        padding: 0 0 calc(45vw / (768 / 100)) 0;
+        font-size: calc(40vw / (768 / 100));
+      }
+    }
+
+    &-p {
+      text-align: center;
+      font-size: 18px;
+      @include pc {
+        font-size: calc(18vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(25vw / (768 / 100));
+      }
+    }
+
+    &-card {
+      @include flex-center;
+      gap: 15px;
+      padding: 43px 0 21px;
+      @include pc {
+        gap: calc(15vw / (1280 / 100));
+        padding: calc(43vw / (1280 / 100)) 0 calc(21vw / (1280 / 100));
+      }
+      @include tab {
+        gap: calc(15vw / (768 / 100));
+        padding: calc(43vw / (768 / 100)) 0 calc(21vw / (768 / 100));
+      }
+      img {
+        width: 111px;
+        @include pc {
+          width: calc(111vw / (1280 / 100));
+        }
+        @include tab {
+          width: calc(111vw / (768 / 100));
+        }
+      }
+    }
+  }
+
+  &__play {
+    margin-top: 60px;
+    padding: 150px 0 170px;
+    background: url(../images/system-bg-play.png) no-repeat;
+    background-size: 1149px 511px;
+    background-position: center;
+    @include pc {
+      margin-top: calc(60vw / (1280 / 100));
+      padding: calc(150vw / (1280 / 100)) 0 calc(170vw / (1280 / 100));
+      background-size: calc(1149vw / (1280 / 100)) calc(511vw / (1280 / 100));
+    }
+    @include tab {
+      margin-top: 0;
+      padding: calc(226vw / (768 / 100)) 0;
+      background-size: auto calc(1037vw / (768 / 100));
+    }
+    h3 {
+      text-align: center;
+      color: #ea659f;
+      font-size: 23px;
+      @include pc {
+        font-size: calc(23vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(40vw / (768 / 100));
+      }
+      span {
+        padding-right: 70px;
+        font-family: "Island Moments", cursive;
+        font-size: 60px;
+        font-weight: bold;
+        @include pc {
+          padding-right: calc(70vw / (1280 / 100));
+          font-size: calc(60vw / (1280 / 100));
+        }
+        @include tab {
+          display: block;
+          padding-right: 0;
+          font-size: calc(80vw / (768 / 100));
+        }
+      }
+    }
+
+    &-inner {
+      @include flex-around;
+      gap: 29px 52px;
+      padding-top: 50px;
+      margin: 0 auto;
+      width: 752px;
+      color: #ea659f;
+      font-size: 20px;
+      @include pc {
+        gap: calc(29vw / (1280 / 100)) calc(52vw / (1280 / 100));
+        padding-top: calc(50vw / (1280 / 100));
+        width: calc(752vw / (1280 / 100));
+        font-size: calc(20vw / (1280 / 100));
+      }
+      @include tab {
+        justify-content: space-between;
+        gap: calc(33vw / (768 / 100));
+        padding: calc(50vw / (768 / 100)) calc(130vw / (768 / 100)) 0;
+        width: 100%;
+        font-size: calc(30vw / (768 / 100));
+        p {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  &__option {
+    margin-top: 54px;
+    padding: 136px 0;
+    height: 619px;
+    background: url(../images/system-bg-option.png) no-repeat;
+    background-size: 1056px 617px;
+    background-position: center;
+    @include pc {
+      margin-top: calc(54vw / (1280 / 100));
+      padding: calc(136vw / (1280 / 100)) 0;
+      height: calc(619vw / (1280 / 100));
+      background-size: calc(1056vw / (1280 / 100)) calc(617vw / (1280 / 100));
+    }
+    @include tab {
+      margin-top: calc(54vw / (768 / 100));
+      padding: calc(130vw / (768 / 100)) 0 calc(230vw / (768 / 100));
+      height: auto;
+      background-size: auto calc(800vw / (768 / 100));
+    }
+    h3 {
+      text-align: center;
+      color: #ea659f;
+      font-size: 23px;
+      @include pc {
+        font-size: calc(23vw / (1280 / 100));
+      }
+      @include tab {
+        font-size: calc(40vw / (768 / 100));
+      }
+      span {
+        padding-right: 70px;
+        font-family: "Island Moments", cursive;
+        font-size: 60px;
+        font-weight: bold;
+        @include pc {
+          padding-right: calc(70vw / (1280 / 100));
+          font-size: calc(60vw / (1280 / 100));
+        }
+        @include tab {
+          display: block;
+          padding-right: 0;
+          font-size: calc(80vw / (768 / 100));
+        }
+      }
+    }
+
+    &-inner {
+      @include flex-start;
+      margin: 0 auto;
+      padding-top: 30px;
+      gap: 78px;
+      width: 722px;
+      color: #ea659f;
+      font-size: 20px;
+      @include pc {
+        padding-top: calc(30vw / (1280 / 100));
+        gap: calc(78vw / (1280 / 100));
+        width: calc(722vw / (1280 / 100));
+        font-size: calc(20vw / (1280 / 100));
+      }
+      @include tab {
+        padding: calc(30vw / (768 / 100)) calc(35vw / (768 / 100)) 0;
+        gap: calc(10vw / (768 / 100));
+        width: 100%;
+        font-size: calc(30vw / (768 / 100));
+      }
+
+      &-link {
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+        @include pc {
+          gap: calc(33vw / (1280 / 100));
+        }
+        @include tab {
+          justify-content: space-between;
+          gap: calc(33vw / (748 / 100));
+          width: 23%;
+          &:nth-child(2) {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+
+  &__ban {
+    position: relative;
+    padding: 170px 0 91px;
+    color: #6767bd;
+    font-size: 20px;
+    @include pc {
+      padding: calc(170vw / (1280 / 100)) 0 calc(91vw / (1280 / 100));
+      font-size: calc(20vw / (1280 / 100));
+    }
+    @include tab {
+      padding: calc(170vw / (748 / 100)) 0 calc(91vw / (748 / 100));
+      font-size: calc(25vw / (748 / 100));
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 97px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../images/system-line-ban.png) no-repeat;
+      background-size: 1018px 54px;
+      background-position: center;
+      width: 1018px;
+      height: 54px;
+
+      @include pc {
+        top: calc(97vw / (1280 / 100));
+        background-size: calc(1018vw / (1280 / 100)) calc(54vw / (1280 / 100));
+        width: calc(1018vw / (1280 / 100));
+        height: calc(54vw / (1280 / 100));
+      }
+      @include tab {
+        top: calc(97vw / (748 / 100));
+        background-size: calc(1018vw / (748 / 100)) calc(54vw / (748 / 100));
+        width: 100%;
+        height: calc(54vw / (748 / 100));
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -27px;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      background: url(../images/system-line-ban.png) no-repeat;
+      background-size: 1018px 54px;
+      background-position: center;
+      width: 1018px;
+      height: 54px;
+      @include pc {
+        bottom: calc(-27vw / (748 / 100));
+        background-size: calc(1018vw / (748 / 100)) calc(54vw / (748 / 100));
+        width: 100%;
+        height: calc(54vw / (748 / 100));
+      }
+    }
+
+    h3 {
+      padding-bottom: 26px;
+      text-align: center;
+      font-size: 23px;
+      @include pc {
+        padding-bottom: calc(26vw / (1280 / 100));
+        font-size: calc(23vw / (1280 / 100));
+      }
+      @include tab {
+        padding-bottom: calc(26vw / (748 / 100));
+        font-size: calc(40vw / (748 / 100));
+      }
+      span {
+        padding-right: 70px;
+        font-family: "Island Moments", cursive;
+        font-size: 60px;
+        font-weight: bold;
+        @include pc {
+          padding-right: calc(70vw / (1280 / 100));
+          font-size: calc(60vw / (1280 / 100));
+        }
+        @include tab {
+          padding-right: 0;
+          display: block;
+          font-size: calc(60vw / (748 / 100));
+        }
+      }
+    }
+    &-p {
+      text-align: center;
+      @include tab {
+        padding: 0 calc(115vw / (768 / 100));
+      }
+    }
+
+    &-box {
+      margin: 0 auto;
+      padding: 62px 251px 0;
+      @include pc {
+        padding: calc(62vw / (1280 / 100)) calc(251vw / (1280 / 100)) 0;
+      }
+      @include tab {
+        padding: calc(62vw / (748 / 100)) calc(62vw / (748 / 100)) 0;
+      }
+    }
+
+    &-list {
+      @include flex-start;
+      flex-direction: column;
+      li {
+        padding: 8px 0;
+        list-style-type: disc; /* リストの左側に黒丸 */
+        margin-left: 24px; /* リストの左側に余白 */
+        text-align: left;
+        @include pc {
+          padding: calc(8vw / (1280 / 100)) 0;
+          margin-left: calc(24vw / (1280 / 100));
+        }
+        @include tab {
+          padding: calc(8vw / (748 / 100)) 0;
+          margin-left: calc(24vw / (748 / 100));
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

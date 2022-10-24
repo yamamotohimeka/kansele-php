@@ -1,0 +1,257 @@
+@import "mixin";
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  &:hover {
+    color: #888;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-variant-ligatures: none;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+  overflow-x: hidden;
+  color: $black;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+.block {
+  display: block !important;
+}
+
+.none {
+  display: none;
+}
+
+.pc {
+  display: block !important;
+  @include tab {
+    display: none !important;
+  }
+}
+
+.tab {
+  display: none !important;
+  @include tab {
+    display: block !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  @include center;
+  padding: 0 20px;
+  @include pc {
+    padding: 0 calc(20vw / (1240 / 100));
+  }
+  @include tab {
+    padding: 0 calc(20vw / (768 / 100));
+  }
+}
+
+.flex {
+  @include flex;
+}
+
+.flex-low {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.flex-around {
+  @include flex-around;
+}
+.swiper {
+  width: 1200px;
+  height: auto;
+}
+
+.h2-title {
+  text-align: center;
+  padding: 60px 0;
+  @include pc {
+    padding: calc(60vw / (1280 / 100)) 0;
+  }
+  @include tab {
+    padding: calc(60vw / (768 / 100)) 0;
+  }
+  @include sp {
+    padding: calc(60vw / (440 / 100)) 0;
+  }
+
+  img {
+    height: 45px;
+    @include pc {
+      height: calc(45vw / (1280 / 100));
+    }
+    @include tab {
+      height: calc(45vw / (768 / 100));
+    }
+    @include sp {
+      height: calc(45vw / (440 / 100));
+    }
+  }
+  p {
+    display: inline-block;
+    position: relative;
+    font-size: 60px;
+    font-weight: 500;
+    font-family: "Island Moments", cursive;
+    color: #ffa6cd;
+    letter-spacing: -2px;
+    @include pc {
+      font-size: calc(60vw / (1280 / 100));
+    }
+    @include tab {
+      font-size: calc(60vw / (768 / 100));
+    }
+    @include sp {
+      font-size: calc(60vw / (440 / 100));
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: -28px;
+      transform: translate(-50%, -50%);
+
+      width: 27px;
+      height: 20px;
+      background: url(../images/h2-heart.png) no-repeat;
+      background-size: contain;
+
+      @include pc {
+        left: calc(-28vw / (1280 / 100));
+        width: calc(27vw / (1280 / 100));
+        height: calc(20vw / (1280 / 100));
+      }
+      @include tab {
+        left: calc(-28vw / (768 / 100));
+        width: calc(27vw / (768 / 100));
+        height: calc(20vw / (768 / 100));
+      }
+      @include sp {
+        left: calc(-28vw / (440 / 100));
+        width: calc(27vw / (440 / 100));
+        height: calc(20vw / (440 / 100));
+      }
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: -55px;
+      transform: translate(-50%, -50%);
+      width: 27px;
+      height: 20px;
+      background: url(../images/h2-heart.png) no-repeat;
+      background-size: contain;
+
+      @include pc {
+        right: calc(-55vw / (1280 / 100));
+        width: calc(27vw / (1280 / 100));
+        height: calc(20vw / (1280 / 100));
+      }
+      @include tab {
+        right: calc(-55vw / (768 / 100));
+        width: calc(27vw / (768 / 100));
+        height: calc(20vw / (768 / 100));
+      }
+      @include sp {
+        right: calc(-55vw / (440 / 100));
+        width: calc(27vw / (440 / 100));
+        height: calc(20vw / (440 / 100));
+      }
+    }
+  }
+}
+.premium-g {
+  &::after {
+    content: "";
+    background: url(../images/premium-g.png) no-repeat;
+    @include puremium;
+  }
+}
+.premium-b {
+  &::after {
+    content: "";
+    background: url(../images/premium-b.png) no-repeat;
+    @include puremium;
+  }
+}
+.premium-p {
+  &::after {
+    content: "";
+    background: url(../images/premium-p.png) no-repeat;
+    @include puremium;
+  }
+}
+.premium-r {
+  &::after {
+    content: "";
+    background: url(../images/premium-r.png) no-repeat;
+    @include puremium;
+  }
+}
+.premium-s {
+  &::after {
+    content: "";
+    background: url(../images/premium-s.png) no-repeat;
+    @include puremium;
+  }
+}
+
+.store-label {
+  padding: 8px 0;
+  margin: 0 auto;
+  background: $purple;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1.2px;
+
+  @include pc {
+    padding: calc(8vw / (1280 / 100));
+    font-size: calc(18vw / (1280 / 100));
+  }
+  @include tab {
+    padding: calc(8vw / (768 / 100));
+    font-size: calc(18vw / (768 / 100));
+  }
+  @include sp {
+    font-size: calc(15vw / (440 / 100));
+  }
+}
+
+.main {
+  background: url(../images/bg-pink.png);
+  padding-bottom: 100px;
+  @include pc {
+    padding-bottom: calc(100vw / (1280 / 100));
+  }
+  @include tab {
+    padding-bottom: calc(100vw / (748 / 100));
+  }
+  @include sp {
+    padding-bottom: calc(100vw / (440 / 100));
+  }
+}

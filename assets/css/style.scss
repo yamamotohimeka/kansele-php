@@ -1,0 +1,19 @@
+//page
+@import "reset";
+@import "mixin";
+@import "base";
+
+@import "top";
+@import "girls";
+@import "schedule";
+@import "system";
+@import "access";
+
+//components
+@import "components/header";
+@import "components/footer";
+@import "components/girlCard";
+@import "components/newfaceCard";
+@import "components/pickupCard";
+@import "components/kuchikomiCard";
+@import "components/mapList";

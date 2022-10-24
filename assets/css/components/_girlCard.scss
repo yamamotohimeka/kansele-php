@@ -1,0 +1,121 @@
+.girlCard {
+  border: 2px solid $purple;
+  padding: 8px;
+  width: 24.5%;
+
+  @include pc {
+    padding: calc(8vw / (1280 / 100));
+  }
+  @include tab {
+    padding: calc(8vw / (768 / 100));
+    width: 49%;
+  }
+
+  &-img {
+    position: relative;
+    padding: 8px 0;
+    border-bottom: 1px solid $purple;
+    @include pc {
+      padding: calc(8vw / (1280 / 100)) 0;
+    }
+    @include tab {
+      padding: calc(8vw / (768 / 100)) 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-name {
+    padding-top: 8px;
+    text-align: center;
+    font-size: 30px;
+    color: $pink;
+    font-weight: bold;
+    @include pc {
+      padding-top: calc(8vw / (1280 / 100));
+      font-size: calc(30vw / (1280 / 100));
+    }
+    @include tab {
+      padding-top: calc(8vw / (768 / 100));
+      font-size: calc(30vw / (768 / 100));
+    }
+    @include sp {
+      padding-top: calc(8vw / (440 / 100));
+      font-size: calc(25vw / (440 / 100));
+    }
+  }
+
+  &-size {
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: 22px;
+    color: $pink;
+    border-bottom: 1px solid $purple;
+    @include pc {
+      padding-bottom: calc(8vw / (1280 / 100));
+      font-size: calc(22vw / (1280 / 100));
+    }
+    @include tab {
+      padding-bottom: calc(8vw / (768 / 100));
+      font-size: calc(22vw / (768 / 100));
+    }
+    @include sp {
+      padding-bottom: calc(8vw / (440 / 100));
+      font-size: calc(16vw / (440 / 100));
+    }
+  }
+
+  &-time {
+    @include flex-center;
+    padding: 8px 0;
+    margin-top: 8px;
+    gap: 0 8px;
+    font-size: 20px;
+    border-radius: 6px;
+    background: #fff;
+    color: #717171;
+    border: solid 1px #717171;
+    @include pc {
+      padding: calc(8vw / (1280 / 100)) 0;
+      margin-top: calc(8vw / (1280 / 100));
+      gap: 0 calc(8vw / (1280 / 100));
+      font-size: calc(20vw / (1280 / 100));
+      border-radius: calc(6vw / (1280 / 100));
+    }
+    @include tab {
+      padding: calc(8vw / (768 / 100)) 0;
+      margin-top: calc(8vw / (768 / 100));
+      gap: 0 calc(8vw / (768 / 100));
+      font-size: calc(20vw / (768 / 100));
+      border-radius: calc(6vw / (768 / 100));
+    }
+    @include sp {
+      padding: calc(8vw / (440 / 100)) 0;
+      margin-top: calc(8vw / (440 / 100));
+      gap: 0 calc(8vw / (440 / 100));
+      font-size: calc(20vw / (440 / 100));
+      border-radius: calc(6vw / (440 / 100));
+    }
+
+    &::before {
+      content: "";
+      width: 17px;
+      height: 17px;
+      background: url(../images/girl-time.png) no-repeat;
+      background-size: contain;
+      @include pc {
+        width: calc(17vw / (1280 / 100));
+        height: calc(17vw / (1280 / 100));
+      }
+      @include tab {
+        width: calc(17vw / (768 / 100));
+        height: calc(17vw / (768 / 100));
+      }
+      @include sp {
+        width: calc(17vw / (440 / 100));
+        height: calc(17vw / (440 / 100));
+      }
+    }
+  }
+}

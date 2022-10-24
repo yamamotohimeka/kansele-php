@@ -1,0 +1,12 @@
+.access {
+  &__nav {
+    text-align: center;
+    padding-top: 29px;
+    @include pc {
+      padding-top: calc(29vw / (1280 / 100));
+    }
+    @include tab {
+      padding-top: calc(29vw / (768 / 100));
+    }
+  }
+}

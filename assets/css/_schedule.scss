@@ -1,0 +1,108 @@
+.schedule {
+  &__btn {
+    padding-bottom: 50px;
+    @include pc {
+      padding-bottom: calc(50vw / (1280 / 100));
+    }
+    @include tab {
+      padding-bottom: calc(50vw / (768 / 100));
+    }
+
+    &__list {
+      @include flex;
+      @include tab {
+        flex-wrap: nowrap;
+        overflow-y: auto;
+      }
+
+      .dateActive {
+        background: url(../images/sche-btn2.png) no-repeat;
+        background-size: 140px 120px;
+        width: 140px;
+        height: 120px;
+        @include pc {
+          background-size: calc(140vw / (1280 / 100)) calc(120vw / (1280 / 100));
+          width: calc(140vw / (1280 / 100));
+          height: calc(120vw / (1280 / 100));
+        }
+        @include tab {
+          background-size: calc(140vw / (768 / 100)) calc(120vw / (768 / 100));
+          width: calc(140vw / (768 / 100));
+          height: calc(120vw / (768 / 100));
+        }
+      }
+
+      &-link {
+        cursor: pointer !important;
+        &_date {
+          padding: 20px 0;
+          width: 140px;
+          height: 120px;
+          background: url(../images/sche-btn1.png) no-repeat;
+          background-size: 140px 120px;
+          text-align: center;
+          color: #fff;
+          @include pc {
+            padding: calc(20vw / (1280 / 100)) 0;
+            width: calc(140vw / (1280 / 100));
+            height: calc(120vw / (1280 / 100));
+            background-size: calc(140vw / (1280 / 100))
+              calc(120vw / (1280 / 100));
+          }
+          @include tab {
+            padding: calc(20vw / (768 / 100)) 0;
+            width: calc(140vw / (768 / 100));
+            height: calc(120vw / (768 / 100));
+            background-size: calc(140vw / (768 / 100)) calc(120vw / (768 / 100));
+          }
+        }
+
+        &_month {
+          font-size: 35px;
+          @include pc {
+            font-size: calc(35vw / (1280 / 100));
+          }
+          @include tab {
+            font-size: calc(35vw / (768 / 100));
+          }
+        }
+        &_day {
+          font-size: 45px;
+          @include pc {
+            font-size: calc(45vw / (1280 / 100));
+          }
+          @include tab {
+            font-size: calc(45vw / (768 / 100));
+          }
+        }
+
+        &_week {
+          padding-top: 5px;
+          color: $purple;
+          font-size: 30px;
+          text-align: center;
+          @include pc {
+            padding-top: calc(5vw / (1280 / 100));
+            font-size: calc(30vw / (1280 / 100));
+          }
+          @include tab {
+            padding-top: calc(5vw / (768 / 100));
+            font-size: calc(30vw / (768 / 100));
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    &__list {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
+      @include pc {
+        gap: calc(8vw / (1280 / 100));
+      }
+    }
+  }
+}

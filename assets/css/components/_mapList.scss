@@ -1,0 +1,96 @@
+.mapList {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 81px;
+  @include pc {
+    padding-bottom: calc(81vw / (1280 / 100));
+  }
+  @include tab {
+    padding-bottom: calc(81vw / (768 / 100));
+  }
+
+  &-store {
+    margin: 0 auto;
+    padding: 9px 0;
+    width: 1000px;
+    background-color: $purple;
+    color: #6464aa;
+    font-weight: bold;
+    text-align: center;
+    font-size: 26px;
+    @include pc {
+      padding: calc(9vw / (1280 / 100)) 0;
+      width: calc(1000vw / (1280 / 100));
+      font-size: calc(26vw / (1280 / 100));
+    }
+    @include tab {
+      padding: calc(9vw / (768 / 100)) 0;
+      width: 100%;
+      font-size: calc(30vw / (768 / 100));
+    }
+  }
+
+  &-text {
+    padding: 19px 0 14px;
+    text-align: center;
+    color: #c65d65;
+    font-size: 25px;
+    letter-spacing: 2px;
+    @include pc {
+      padding: calc(19vw / (1280 / 100)) 0 calc(14vw / (1280 / 100));
+      font-size: calc(25vw / (1280 / 100));
+    }
+    @include tab {
+      padding: calc(19vw / (768 / 100)) 0 calc(14vw / (768 / 100));
+      font-size: calc(25vw / (768 / 100));
+    }
+  }
+
+  &:not(:last-child) ::after {
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    border-bottom: 1px dashed #6464aa;
+    @include pc {
+      bottom: calc(40vw / (1280 / 100));
+      width: calc(1000vw / (1280 / 100));
+    }
+    @include tab {
+      bottom: calc(40vw / (768 / 100));
+      width: calc(1000vw / (768 / 100));
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &-img {
+    margin: 0 auto;
+    width: 1000px;
+    @include pc {
+      width: calc(1000vw / (1280 / 100));
+    }
+    @include pc {
+      width: 100%;
+    }
+  }
+
+  &-address {
+    padding: 19px 0 14px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    @include pc {
+      padding: calc(19vw / (1280 / 100)) 0 calc(14vw / (1280 / 100));
+      font-size: calc(20vw / (1280 / 100));
+    }
+    @include tab {
+      padding: calc(19vw / (768 / 100)) 0 calc(14vw / (768 / 100));
+      font-size: calc(20vw / (768 / 100));
+    }
+  }
+}
