@@ -59,6 +59,12 @@
           </a></p>
         <p>受付:24時間営業</p>
       </div>
+      <div>
+        <p style="text-align: center; padding-bottom: 3px;margin: 0;">
+          <a rel="nofollow" href="https://kansai.qzin.jp/kansele/?v=official" target="_blank"><img
+              src="https://ad.qzin.jp/img/vanilla468-60.gif" width="468" border="0" alt="関西セレクションで稼ぐならバニラ求人"></a>
+        </p>
+      </div>
 
     </div>
   </div>
